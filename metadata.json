@@ -1,0 +1,5 @@
+{
+  "name": "Google Perfil da Empresa - Restaurantes",
+  "description": "Uma réplica da página de destino do Google Perfil da Empresa para restaurantes, criada com Next.js e Tailwind CSS.",
+  "requestFramePermissions": []
+}
