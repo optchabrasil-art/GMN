@@ -42,56 +42,101 @@ export function Hero() {
         </div>
         <div className="flex-1 relative">
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative z-10"
+            className="relative flex items-center justify-center lg:justify-end"
           >
-            {/* Mockup image container */}
-            <div className="relative w-full max-w-md mx-auto">
-              <div className="bg-white rounded-[2.5rem] shadow-2xl p-4 border-8 border-gray-100">
-                <div className="rounded-[1.5rem] overflow-hidden bg-gray-50 aspect-[9/19.5] relative">
-                  <Image 
-                    src="https://picsum.photos/seed/restaurant-profile/400/800" 
-                    alt="Google Business Profile Mockup" 
-                    fill
-                    className="object-cover"
-                    referrerPolicy="no-referrer"
-                  />
-                  {/* Overlay for profile details */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+            {/* Background Image (Coffee Machine) */}
+            <div className="relative w-full max-w-lg aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl translate-x-4 lg:translate-x-12">
+              <Image 
+                src="https://picsum.photos/seed/espresso-machine-pro/800/600" 
+                alt="Espresso Machine" 
+                fill
+                className="object-cover"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-black/5" />
+            </div>
+
+            {/* Mobile Mockup (Café Local Profile) */}
+            <motion.div 
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="absolute left-0 lg:-left-8 top-1/2 -translate-y-1/2 w-[280px] sm:w-[320px] bg-white rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.2)] border-[6px] border-white overflow-hidden z-20"
+            >
+              {/* Profile Header Images */}
+              <div className="flex h-32 gap-1 p-1">
+                <div className="flex-1 relative rounded-tl-[1.8rem] overflow-hidden">
+                  <Image src="https://picsum.photos/seed/latte-art/300/300" alt="Latte Art" fill className="object-cover" referrerPolicy="no-referrer" />
+                </div>
+                <div className="flex-1 relative rounded-tr-[1.8rem] overflow-hidden">
+                  <Image src="https://picsum.photos/seed/croissants-top/300/300" alt="Croissants" fill className="object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
-              {/* Floating elements */}
-              <motion.div 
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-10 -right-10 w-48 h-48 bg-white rounded-2xl shadow-xl p-2 hidden lg:block"
-              >
-                <Image 
-                  src="https://picsum.photos/seed/coffee/200/200" 
-                  alt="Coffee" 
-                  width={200} 
-                  height={200}
-                  className="rounded-xl object-cover w-full h-full"
-                  referrerPolicy="no-referrer"
-                />
-              </motion.div>
-              <motion.div 
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-10 -left-10 w-56 h-40 bg-white rounded-2xl shadow-xl p-2 hidden lg:block"
-              >
-                <Image 
-                  src="https://picsum.photos/seed/croissant/300/200" 
-                  alt="Croissants" 
-                  width={300} 
-                  height={200}
-                  className="rounded-xl object-cover w-full h-full"
-                  referrerPolicy="no-referrer"
-                />
-              </motion.div>
-            </div>
+
+              {/* Profile Info */}
+              <div className="p-5 space-y-4">
+                <div>
+                  <h3 className="text-xl font-bold text-[#3c4043]">Café Local</h3>
+                  <div className="flex items-center gap-1 text-sm mt-1">
+                    <span className="font-medium">4.6</span>
+                    <div className="flex text-yellow-400">
+                      {"★★★★★".split("").map((s, i) => <span key={i}>{s}</span>)}
+                    </div>
+                    <span className="text-[#1a73e8] ml-1">80 avaliações</span>
+                  </div>
+                  <p className="text-sm text-[#5f6368]">Cafeteria</p>
+                </div>
+
+                {/* Tabs */}
+                <div className="flex border-b border-gray-100 text-sm font-medium">
+                  <span className="text-[#1a73e8] border-b-2 border-[#1a73e8] pb-2 px-2">Visão geral</span>
+                  <span className="text-[#5f6368] pb-2 px-2 opacity-40">Cardápio</span>
+                  <span className="text-[#5f6368] pb-2 px-2 opacity-40">Avaliações</span>
+                </div>
+
+                {/* Action Icons */}
+                <div className="flex justify-between px-2">
+                  {[1, 2, 3, 4].map((i) => (
+                    <div key={i} className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                      <div className="w-5 h-5 bg-[#1a73e8] rounded-sm opacity-80" />
+                    </div>
+                  ))}
+                </div>
+
+                {/* Buttons */}
+                <div className="flex gap-2">
+                  <button className="flex-1 py-2 px-1 border border-[#dadce0] rounded-full text-[10px] font-bold text-[#1a73e8] uppercase tracking-wider">
+                    Peça e retire
+                  </button>
+                  <button className="flex-1 py-2 px-1 border border-[#dadce0] rounded-full text-[10px] font-bold text-[#1a73e8] uppercase tracking-wider">
+                    Peça para entrega
+                  </button>
+                </div>
+
+                {/* Status */}
+                <div className="space-y-3 pt-2">
+                  <div className="flex items-center gap-3 text-xs text-[#3c4043]">
+                    <div className="w-4 h-4 rounded-full bg-green-100 flex items-center justify-center">
+                      <div className="w-2 h-2 text-green-600">✓</div>
+                    </div>
+                    <span>Refeição no local</span>
+                    <div className="w-4 h-4 rounded-full bg-green-100 flex items-center justify-center">
+                      <div className="w-2 h-2 text-green-600">✓</div>
+                    </div>
+                    <span>Para viagem</span>
+                  </div>
+                  <div className="h-px bg-gray-100" />
+                  <div className="flex items-center gap-3 text-xs">
+                    <div className="w-4 h-4 bg-blue-100 rounded-sm" />
+                    <span className="text-green-700 font-medium">Aberto</span>
+                    <span className="text-[#5f6368]">• Fecha às 20h</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
