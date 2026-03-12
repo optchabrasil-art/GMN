@@ -16,8 +16,8 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="text-4xl lg:text-6xl font-bold text-[#3c4043] leading-tight mb-6"
           >
-            Mostre o que torna <br />
-            <span className="text-[#1a73e8]">seu restaurante especial</span>
+            Destaque sua empresa e <br />
+            <span className="text-[#1a73e8]">atraia mais clientes no Google</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -25,7 +25,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-[#5f6368] leading-relaxed mb-8"
           >
-            Ajude os clientes a encontrar e escolher seu restaurante ou seu comércio de alimentos no Google com base no seu cardápio, nas suas fotos e muito mais. Você também pode aceitar pedidos e reservas on-line no seu perfil, simplificando o processo para que os clientes escolham entre refeições para viagem ou consumo no local.
+            Com o Google Meu Negócio, você aparece para quem está procurando pelos seus produtos ou serviços na Pesquisa e no Maps. Transforme buscas em vendas e aumente o faturamento da sua empresa.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -36,7 +36,7 @@ export function Hero() {
               href="#" 
               className="inline-block bg-[#1a73e8] text-white font-medium px-8 py-3 rounded-full shadow-md hover:bg-[#1557b0] transition-all transform hover:scale-105"
             >
-              Começar agora
+              Fale com uma especialista
             </Link>
           </motion.div>
         </div>
@@ -69,31 +69,31 @@ export function Hero() {
               {/* Profile Header Images */}
               <div className="flex h-32 gap-1 p-1">
                 <div className="flex-1 relative rounded-tl-[1.8rem] overflow-hidden">
-                  <Image src="https://picsum.photos/seed/latte-art/300/300" alt="Latte Art" fill className="object-cover" referrerPolicy="no-referrer" />
+                  <Image src="https://picsum.photos/seed/business-store/300/300" alt="Storefront" fill className="object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="flex-1 relative rounded-tr-[1.8rem] overflow-hidden">
-                  <Image src="https://picsum.photos/seed/croissants-top/300/300" alt="Croissants" fill className="object-cover" referrerPolicy="no-referrer" />
+                  <Image src="https://picsum.photos/seed/business-service/300/300" alt="Service" fill className="object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
 
               {/* Profile Info */}
               <div className="p-5 space-y-4">
                 <div>
-                  <h3 className="text-xl font-bold text-[#3c4043]">Café Local</h3>
+                  <h3 className="text-xl font-bold text-[#3c4043]">Sua Empresa</h3>
                   <div className="flex items-center gap-1 text-sm mt-1">
-                    <span className="font-medium">4.6</span>
+                    <span className="font-medium">4.9</span>
                     <div className="flex text-yellow-400">
                       {"★★★★★".split("").map((s, i) => <span key={i}>{s}</span>)}
                     </div>
-                    <span className="text-[#1a73e8] ml-1">80 avaliações</span>
+                    <span className="text-[#1a73e8] ml-1">120 avaliações</span>
                   </div>
-                  <p className="text-sm text-[#5f6368]">Cafeteria</p>
+                  <p className="text-sm text-[#5f6368]">Seu Nicho de Atuação</p>
                 </div>
 
                 {/* Tabs */}
                 <div className="flex border-b border-gray-100 text-sm font-medium">
                   <span className="text-[#1a73e8] border-b-2 border-[#1a73e8] pb-2 px-2">Visão geral</span>
-                  <span className="text-[#5f6368] pb-2 px-2 opacity-40">Cardápio</span>
+                  <span className="text-[#5f6368] pb-2 px-2 opacity-40">Serviços</span>
                   <span className="text-[#5f6368] pb-2 px-2 opacity-40">Avaliações</span>
                 </div>
 
@@ -109,10 +109,10 @@ export function Hero() {
                 {/* Buttons */}
                 <div className="flex gap-2">
                   <button className="flex-1 py-2 px-1 border border-[#dadce0] rounded-full text-[10px] font-bold text-[#1a73e8] uppercase tracking-wider">
-                    Peça e retire
+                    Solicitar orçamento
                   </button>
                   <button className="flex-1 py-2 px-1 border border-[#dadce0] rounded-full text-[10px] font-bold text-[#1a73e8] uppercase tracking-wider">
-                    Peça para entrega
+                    Fazer agendamento
                   </button>
                 </div>
 
@@ -122,11 +122,11 @@ export function Hero() {
                     <div className="w-4 h-4 rounded-full bg-green-100 flex items-center justify-center">
                       <div className="w-2 h-2 text-green-600">✓</div>
                     </div>
-                    <span>Refeição no local</span>
+                    <span>Atendimento no local</span>
                     <div className="w-4 h-4 rounded-full bg-green-100 flex items-center justify-center">
                       <div className="w-2 h-2 text-green-600">✓</div>
                     </div>
-                    <span>Para viagem</span>
+                    <span>Orçamento online</span>
                   </div>
                   <div className="h-px bg-gray-100" />
                   <div className="flex items-center gap-3 text-xs">

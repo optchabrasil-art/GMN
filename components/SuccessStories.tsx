@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { motion } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -13,8 +12,8 @@ export function SuccessStories() {
           Histórias de sucesso que adoramos
         </h2>
         
-        <div className="bg-white rounded-[2rem] shadow-lg overflow-hidden flex flex-col lg:flex-row max-w-6xl mx-auto">
-          <div className="flex-1 p-12 lg:p-20 flex flex-col justify-center">
+        <div className="bg-white rounded-[2rem] shadow-lg overflow-hidden max-w-4xl mx-auto text-center">
+          <div className="p-12 lg:p-20 flex flex-col justify-center items-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -22,22 +21,13 @@ export function SuccessStories() {
               transition={{ duration: 0.5 }}
             >
               <blockquote className="text-2xl lg:text-4xl font-medium text-[#3c4043] mb-8 leading-tight">
-                “Postagens me permitem interagir mais com clientes.”
+                “Depois que otimizamos nosso perfil no Google Meu Negócio, o número de ligações e agendamentos dobrou. Os clientes nos encontram muito mais fácil agora.”
               </blockquote>
               <div className="text-[#5f6368]">
-                <p className="font-bold">A Fantástica Torta da Maria</p>
+                <p className="font-bold">Centro Automotivo Confiança</p>
                 <p>São Paulo, SP</p>
               </div>
             </motion.div>
-          </div>
-          <div className="flex-1 relative min-h-[400px]">
-            <Image 
-              src="https://picsum.photos/seed/chef/800/600" 
-              alt="Success Story - Chef" 
-              fill
-              className="object-cover"
-              referrerPolicy="no-referrer"
-            />
           </div>
         </div>
 

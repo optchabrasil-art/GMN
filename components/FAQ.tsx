@@ -6,16 +6,16 @@ import { motion, AnimatePresence } from 'motion/react';
 
 const faqItems = [
   {
-    question: "Como faço para adicionar e editar os atributos da minha empresa? Quero exibir os serviços oferecidos, como entrega e retirada.",
-    answer: "Você pode gerenciar os atributos da sua empresa diretamente no seu Perfil da Empresa no Google. Acesse seu perfil, clique em 'Editar perfil' e procure pela seção de informações comerciais ou atributos. Lá você poderá marcar opções como 'Retirada na porta', 'Entrega sem contato', 'Consumo no local' e muito mais."
+    question: "O que é o Google Meu Negócio?",
+    answer: "É uma ferramenta gratuita que permite gerenciar como sua empresa aparece na Pesquisa Google e no Maps, ajudando você a atrair e interagir com clientes locais."
   },
   {
-    question: "Como faço para atualizar meu cardápio?",
-    answer: "Para atualizar seu cardápio, faça login no Perfil da Empresa, selecione seu restaurante e procure pela opção 'Cardápio'. Você pode adicionar itens, descrições, preços e até fotos de cada prato para atrair mais clientes."
+    question: "Como faço para minha empresa aparecer no Google?",
+    answer: "Basta criar ou reivindicar seu perfil, preencher todas as informações corretamente e mantê-lo atualizado com fotos, horários e postagens regulares."
   },
   {
-    question: "Como faço para aceitar pedidos de comida no meu perfil?",
-    answer: "O Google permite que você aceite pedidos diretamente pelo seu perfil através de parceiros integrados. Você pode configurar isso na seção 'Pedidos de comida' do seu painel de gerenciamento, escolhendo os parceiros de entrega com os quais você já trabalha."
+    question: "Preciso pagar para ter um perfil?",
+    answer: "Não, o perfil básico é totalmente gratuito. Nossa equipe oferece o serviço de otimização e gestão profissional para maximizar seus resultados e poupar seu tempo."
   }
 ];
 

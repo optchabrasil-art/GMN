@@ -8,17 +8,17 @@ const steps = [
   {
     number: "1",
     title: "Reivindicar",
-    description: "Crie um Perfil da Empresa ou gerencie um que já esteja na Busca e no Maps"
+    description: "Assuma o controle da sua empresa no Google. É rápido e garante que suas informações estejam seguras."
   },
   {
     number: "2",
     title: "Personalizar",
-    description: "Adicione o horário de funcionamento, fotos e outros detalhes para que clientes próximos vejam sua empresa"
+    description: "Adicione o horário de funcionamento, fotos e outros detalhes para que clientes próximos vejam sua empresa."
   },
   {
     number: "3",
     title: "Gerenciar",
-    description: "Compartilhe novidades, responda a avaliações e interaja com os clientes no Google"
+    description: "Compartilhe novidades, responda a avaliações e interaja com os clientes no Google."
   }
 ];
 
@@ -30,14 +30,14 @@ export function Steps() {
           Mostre o melhor da sua empresa
         </h2>
         <p className="text-lg text-[#5f6368] mb-10 max-w-2xl mx-auto">
-          Alcance mais clientes em três etapas simples com o Perfil da Empresa gratuito.
+          Alcance mais clientes em três etapas simples com o Google Meu Negócio.
         </p>
         
         <Link 
           href="#" 
           className="inline-block bg-[#1a73e8] text-white font-medium px-10 py-3 rounded-md shadow-sm hover:bg-[#1557b0] transition-colors mb-20"
         >
-          Começar agora
+          Fale com uma especialista
         </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-6xl mx-auto">

@@ -73,16 +73,11 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col lg:flex-row items-center justify-between pt-8 border-t border-gray-200 gap-6">
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6">
-            <Image 
-              src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
-              alt="Google" 
-              width={60} 
-              height={20}
-              className="opacity-60"
-              referrerPolicy="no-referrer"
-            />
-            <Link href="#" className="text-xs text-[#5f6368] hover:underline">Sobre o Google</Link>
-            <Link href="#" className="text-xs text-[#5f6368] hover:underline">Produtos do Google</Link>
+            <Link href="/" className="text-lg font-bold text-[#5f6368] tracking-tight mr-2">
+              Logo
+            </Link>
+            <Link href="#" className="text-xs text-[#5f6368] hover:underline">Sobre a Plataforma</Link>
+            <Link href="#" className="text-xs text-[#5f6368] hover:underline">Produtos</Link>
             <Link href="#" className="text-xs text-[#5f6368] hover:underline">Privacidade</Link>
             <Link href="#" className="text-xs text-[#5f6368] hover:underline">Termos</Link>
           </div>
