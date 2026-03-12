@@ -7,9 +7,6 @@ export function SubNavbar() {
   return (
     <div className="flex items-center justify-between px-4 py-3 bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="flex items-center gap-8">
-        <Link href="/" className="text-lg font-medium text-[#3c4043]">
-          Google Meu Negócio
-        </Link>
         <div className="hidden lg:flex items-center gap-6 text-sm text-[#5f6368]">
           <Link href="#" className="hover:text-black transition-colors">Lojas Físicas</Link>
           <Link href="#" className="hover:text-black transition-colors">Serviços</Link>

@@ -22,13 +22,13 @@ export function FeatureSection({ title, description, imageSrc, reverse = false, 
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative rounded-3xl overflow-hidden shadow-xl aspect-square max-w-lg mx-auto"
+            className="relative aspect-square max-w-lg mx-auto flex items-center justify-center"
           >
             <Image 
               src={imageSrc} 
               alt={title} 
               fill
-              className="object-cover"
+              className="object-contain"
               referrerPolicy="no-referrer"
             />
           </motion.div>

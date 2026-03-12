@@ -18,14 +18,14 @@ export default function Home() {
       <FeatureSection 
         title="Seja encontrado por quem procura o que você vende"
         description="Apareça no topo das buscas locais e no Google Maps. Mostre endereço, horário de funcionamento e telefone para facilitar o contato dos clientes."
-        imageSrc="https://picsum.photos/seed/search-local/600/600"
+        imageSrc="https://storage.googleapis.com/aistudio-build-attachments/1741805408611-image.png"
         bgColor="bg-[#e8f0fe]"
       />
 
       <FeatureSection 
         title="Construa confiança com avaliações"
         description="Incentive seus clientes a deixarem avaliações positivas e responda a comentários para mostrar que você se importa com o atendimento."
-        imageSrc="https://picsum.photos/seed/reviews-stars/600/600"
+        imageSrc="https://storage.googleapis.com/aistudio-build-attachments/1741805411709-image.png"
         reverse
         bgColor="bg-[#fff8e1]"
       />
@@ -33,7 +33,7 @@ export default function Home() {
       <FeatureSection 
         title="Mostre seus produtos e serviços"
         description="Crie um catálogo digital gratuito. Adicione fotos de alta qualidade dos seus produtos, serviços ou do seu espaço para atrair mais visitantes."
-        imageSrc="https://picsum.photos/seed/catalog-products/600/600"
+        imageSrc="https://storage.googleapis.com/aistudio-build-attachments/1741805410188-image.png"
         bgColor="bg-[#fce8e6]"
       />
 
