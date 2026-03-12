@@ -7,37 +7,37 @@ import { motion } from 'motion/react';
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white py-16 lg:py-24">
-      <div className="container mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
-        <div className="flex-1 max-w-2xl lg:pr-8 relative z-30">
+    <section className="relative overflow-hidden bg-white py-12 sm:py-16 lg:py-24 2xl:py-32">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 flex flex-col lg:flex-row items-center gap-10 md:gap-16 lg:gap-8 2xl:gap-16">
+        <div className="flex-1 w-full max-w-2xl lg:pr-8 2xl:pr-16 relative z-30 text-center lg:text-left">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#3c4043] leading-tight mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#3c4043] leading-tight mb-4 sm:mb-6"
           >
-            Destaque sua empresa e <br />
+            Destaque sua empresa e <br className="hidden sm:block" />
             <span className="text-[#1a73e8]">atraia mais clientes no Google</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-[#5f6368] leading-relaxed mb-8"
+            className="text-base sm:text-lg md:text-xl 2xl:text-2xl text-[#5f6368] leading-relaxed mb-6 sm:mb-8"
           >
             Com o Google Meu Negócio, você aparece para quem está procurando pelos seus produtos ou serviços na Pesquisa e no Maps. Transforme buscas em vendas e aumente o faturamento da sua empresa.
           </motion.p>
         </div>
-        <div className="flex-1 relative w-full mt-12 lg:mt-0 z-10">
+        <div className="flex-1 w-full relative mt-8 sm:mt-12 lg:mt-0 z-10">
           <motion.div 
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative flex items-center justify-center lg:justify-end w-full max-w-xl mx-auto lg:ml-auto lg:mr-0"
+            className="relative flex items-center justify-center lg:justify-end w-full max-w-md sm:max-w-xl 2xl:max-w-2xl mx-auto lg:ml-auto lg:mr-0"
           >
-            <div className="relative w-full max-w-[500px]">
+            <div className="relative w-full max-w-[320px] sm:max-w-[500px] 2xl:max-w-[600px]">
               {/* Background Image (Coffee Machine) */}
-              <div className="relative w-full max-w-[400px] lg:max-w-[420px] aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl ml-auto">
+              <div className="relative w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[420px] 2xl:max-w-[500px] aspect-[4/3] rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-2xl mx-auto lg:ml-auto lg:mr-0">
                 <Image 
                   src="https://picsum.photos/seed/espresso-machine-pro/800/600" 
                   alt="Espresso Machine" 
@@ -53,7 +53,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="absolute left-0 lg:left-8 top-1/2 -translate-y-1/2 w-[240px] sm:w-[280px] bg-white rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.2)] border-[6px] border-white overflow-hidden z-20"
+                className="absolute left-[-10px] sm:left-0 lg:left-8 2xl:left-12 top-1/2 -translate-y-1/2 w-[220px] sm:w-[280px] 2xl:w-[320px] bg-white rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_10px_30px_rgba(0,0,0,0.15)] sm:shadow-[0_20px_50px_rgba(0,0,0,0.2)] border-[4px] sm:border-[6px] border-white overflow-hidden z-20"
               >
               {/* Profile Header Images */}
               <div className="flex h-32 gap-1 p-1">
