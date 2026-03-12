@@ -29,12 +29,6 @@ export function FAQ() {
           Respostas para suas perguntas
         </h2>
 
-        <div className="flex justify-end mb-4">
-          <button className="text-[#1a73e8] text-sm sm:text-base font-medium flex items-center gap-1 hover:underline">
-            Abrir tudo <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5" />
-          </button>
-        </div>
-
         <div className="space-y-2 sm:space-y-4">
           {faqItems.map((item, index) => (
             <div key={index} className="border-b border-gray-200">
