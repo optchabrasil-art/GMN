@@ -45,7 +45,7 @@ export function Hero() {
             </button>
           </motion.div>
         </div>
-        <div className="flex-1 w-full relative mt-8 sm:mt-12 lg:mt-0 z-10">
+        <div className="flex-1 w-full relative mt-20 mb-16 sm:mt-24 sm:mb-20 lg:mt-0 lg:mb-0 z-10">
           <motion.div 
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
