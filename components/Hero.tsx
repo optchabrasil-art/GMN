@@ -1,14 +1,18 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'motion/react';
+import { PackagesModal } from './PackagesModal';
 
 export function Hero() {
+  const [isPackagesModalOpen, setIsPackagesModalOpen] = useState(false);
+
   return (
     <section className="relative overflow-hidden bg-white py-12 sm:py-16 lg:py-24 2xl:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 flex flex-col lg:flex-row items-center gap-10 md:gap-16 lg:gap-8 2xl:gap-16">
+        <PackagesModal isOpen={isPackagesModalOpen} onClose={() => setIsPackagesModalOpen(false)} />
         <div className="flex-1 w-full max-w-2xl lg:pr-8 2xl:pr-16 relative z-30 text-center lg:text-left">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
@@ -16,7 +20,7 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#3c4043] leading-tight mb-4 sm:mb-6"
           >
-            Destaque sua empresa e <br className="hidden sm:block" />
+            Destaque seu negócio e <br className="hidden sm:block" />
             <span className="text-[#1a73e8]">atraia mais clientes no Google</span>
           </motion.h1>
           <motion.p 
@@ -25,8 +29,29 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl 2xl:text-2xl text-[#5f6368] leading-relaxed mb-6 sm:mb-8"
           >
-            Com o Google Meu Negócio, você aparece para quem está procurando pelos seus produtos ou serviços na Pesquisa e no Maps. Transforme buscas em vendas e aumente o faturamento da sua empresa.
+            Com o Google Meu Negócio, você aparece para quem está procurando pelos seus produtos ou serviços na Pesquisa e no Maps. Transforme buscas em vendas e aumente o faturamento do seu negócio.
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+          >
+            <Link 
+              href="https://wa.me/5511921814523" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-[#1a73e8] text-white font-medium px-8 py-3 rounded-md shadow-sm hover:bg-[#1557b0] transition-colors text-center"
+            >
+              Fale com uma especialista
+            </Link>
+            <button 
+              onClick={() => setIsPackagesModalOpen(true)}
+              className="inline-block bg-white text-[#1a73e8] border border-[#1a73e8] font-medium px-8 py-3 rounded-md shadow-sm hover:bg-blue-50 transition-colors text-center"
+            >
+              Ver Pacotes
+            </button>
+          </motion.div>
         </div>
         <div className="flex-1 w-full relative mt-8 sm:mt-12 lg:mt-0 z-10">
           <motion.div 
@@ -58,17 +83,17 @@ export function Hero() {
               {/* Profile Header Images */}
               <div className="flex h-32 gap-1 p-1">
                 <div className="flex-1 relative rounded-tl-[1.8rem] overflow-hidden">
-                  <Image src="https://picsum.photos/seed/business-store/300/300" alt="Storefront" fill className="object-cover" referrerPolicy="no-referrer" />
+                  <Image src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=300&auto=format&fit=crop" alt="Restaurante Popular" fill className="object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="flex-1 relative rounded-tr-[1.8rem] overflow-hidden">
-                  <Image src="https://picsum.photos/seed/business-service/300/300" alt="Service" fill className="object-cover" referrerPolicy="no-referrer" />
+                  <Image src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=300&auto=format&fit=crop" alt="Bar" fill className="object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
 
               {/* Profile Info */}
               <div className="p-5 space-y-4">
                 <div>
-                  <h3 className="text-xl font-bold text-[#3c4043]">Sua Empresa</h3>
+                  <h3 className="text-xl font-bold text-[#3c4043]">Seu negócio</h3>
                   <div className="flex items-center gap-1 text-sm mt-1">
                     <span className="font-medium">4.9</span>
                     <div className="flex text-yellow-400">
@@ -96,32 +121,36 @@ export function Hero() {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex gap-2">
-                  <button className="flex-1 py-2 px-1 border border-[#dadce0] rounded-full text-[10px] font-bold text-[#1a73e8] uppercase tracking-wider">
+                <div className="flex flex-col sm:flex-row gap-2">
+                  <button className="w-full py-2 px-2 border border-[#dadce0] rounded-full text-[9px] sm:text-[10px] font-bold text-[#1a73e8] uppercase tracking-wider text-center">
                     Solicitar orçamento
                   </button>
-                  <button className="flex-1 py-2 px-1 border border-[#dadce0] rounded-full text-[10px] font-bold text-[#1a73e8] uppercase tracking-wider">
+                  <button className="w-full py-2 px-2 border border-[#dadce0] rounded-full text-[9px] sm:text-[10px] font-bold text-[#1a73e8] uppercase tracking-wider text-center">
                     Fazer agendamento
                   </button>
                 </div>
 
                 {/* Status */}
-                <div className="space-y-3 pt-2">
-                  <div className="flex items-center gap-3 text-xs text-[#3c4043]">
-                    <div className="w-4 h-4 rounded-full bg-green-100 flex items-center justify-center">
-                      <div className="w-2 h-2 text-green-600">✓</div>
+                <div className="space-y-2 sm:space-y-3 pt-2">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-[10px] sm:text-xs text-[#3c4043]">
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 text-green-600 leading-none">✓</div>
+                      </div>
+                      <span className="truncate">Atendimento no local</span>
                     </div>
-                    <span>Atendimento no local</span>
-                    <div className="w-4 h-4 rounded-full bg-green-100 flex items-center justify-center">
-                      <div className="w-2 h-2 text-green-600">✓</div>
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 text-green-600 leading-none">✓</div>
+                      </div>
+                      <span className="truncate">Orçamento online</span>
                     </div>
-                    <span>Orçamento online</span>
                   </div>
                   <div className="h-px bg-gray-100" />
-                  <div className="flex items-center gap-3 text-xs">
-                    <div className="w-4 h-4 bg-blue-100 rounded-sm" />
+                  <div className="flex items-center gap-2 sm:gap-3 text-[10px] sm:text-xs">
+                    <div className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-100 rounded-sm shrink-0" />
                     <span className="text-green-700 font-medium">Aberto</span>
-                    <span className="text-[#5f6368]">• Fecha às 20h</span>
+                    <span className="text-[#5f6368] truncate">• Fecha às 20h</span>
                   </div>
                 </div>
               </div>

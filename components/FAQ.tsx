@@ -7,15 +7,15 @@ import { motion, AnimatePresence } from 'motion/react';
 const faqItems = [
   {
     question: "O que é o Google Meu Negócio?",
-    answer: "É uma ferramenta gratuita que permite gerenciar como sua empresa aparece na Pesquisa Google e no Maps, ajudando você a atrair e interagir com clientes locais."
+    answer: "É uma ferramenta essencial que permite gerenciar como seu negócio aparece na Pesquisa Google e no Maps, ajudando você a atrair e interagir com clientes locais."
   },
   {
-    question: "Como faço para minha empresa aparecer no Google?",
-    answer: "Basta criar ou reivindicar seu perfil, preencher todas as informações corretamente e mantê-lo atualizado com fotos, horários e postagens regulares."
+    question: "Como funciona o serviço de criação e otimização?",
+    answer: "Nós criamos ou otimizamos o seu perfil de forma profissional, configurando categoria, descrição, produtos, fotos e horários para que seu negócio seja encontrado mais facilmente por novos clientes."
   },
   {
-    question: "Preciso pagar para ter um perfil?",
-    answer: "Não, o perfil básico é totalmente gratuito. Nossa equipe oferece o serviço de otimização e gestão profissional para maximizar seus resultados e poupar seu tempo."
+    question: "O serviço é pago?",
+    answer: "Sim, oferecemos pacotes profissionais para a criação, otimização e gestão contínua do seu perfil no Google Meu Negócio. Fale com nossa equipe para conhecer os valores e escolher o melhor plano para você."
   }
 ];
 

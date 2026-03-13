@@ -35,7 +35,7 @@ export default function Home() {
 
       <FeatureSection 
         title="Acompanhe seus resultados"
-        description="Entenda como os clientes encontram sua empresa. Veja quantas pessoas ligaram, acessaram seu site ou pediram rotas para o seu endereço."
+        description="Entenda como os clientes encontram seu negócio. Veja quantas pessoas ligaram, acessaram seu site ou pediram rotas para o seu endereço."
         bgColor="bg-[#e6f4ea]"
       />
 
