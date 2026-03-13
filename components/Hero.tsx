@@ -37,17 +37,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
-            <Link 
-              href="https://wa.me/5511921814523" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-[#1a73e8] text-white font-medium px-8 py-3 rounded-md shadow-sm hover:bg-[#1557b0] transition-colors text-center"
-            >
-              Fale com uma especialista
-            </Link>
             <button 
               onClick={() => setIsPackagesModalOpen(true)}
-              className="inline-block bg-white text-[#1a73e8] border border-[#1a73e8] font-medium px-8 py-3 rounded-md shadow-sm hover:bg-blue-50 transition-colors text-center"
+              className="inline-block bg-[#1a73e8] text-white font-medium px-8 py-3 rounded-md shadow-sm hover:bg-[#1557b0] transition-colors text-center"
             >
               Ver Pacotes
             </button>
