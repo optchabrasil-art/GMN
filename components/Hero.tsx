@@ -52,25 +52,13 @@ export function Hero() {
             transition={{ duration: 0.8 }}
             className="relative flex items-center justify-center lg:justify-end w-full max-w-md sm:max-w-xl 2xl:max-w-2xl mx-auto lg:ml-auto lg:mr-0"
           >
-            <div className="relative w-full max-w-[320px] sm:max-w-[500px] 2xl:max-w-[600px]">
-              {/* Background Image (Coffee Machine) */}
-              <div className="relative w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[420px] 2xl:max-w-[500px] aspect-[4/3] rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-2xl mx-auto lg:ml-auto lg:mr-0">
-                <Image 
-                  src="https://picsum.photos/seed/espresso-machine-pro/800/600" 
-                  alt="Espresso Machine" 
-                  fill
-                  className="object-cover"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-black/5" />
-              </div>
-
+            <div className="relative w-full flex justify-center lg:justify-end">
               {/* Mobile Mockup (Café Local Profile) */}
               <motion.div 
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="absolute left-[-10px] sm:left-0 lg:left-8 2xl:left-12 top-1/2 -translate-y-1/2 w-[220px] sm:w-[280px] 2xl:w-[320px] bg-white rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_10px_30px_rgba(0,0,0,0.15)] sm:shadow-[0_20px_50px_rgba(0,0,0,0.2)] border-[4px] sm:border-[6px] border-white overflow-hidden z-20"
+                className="relative w-[280px] sm:w-[320px] 2xl:w-[360px] bg-white rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-[4px] sm:border-[6px] border-white overflow-hidden z-20 mx-auto lg:mx-0"
               >
               {/* Profile Header Images */}
               <div className="flex h-32 gap-1 p-1">
