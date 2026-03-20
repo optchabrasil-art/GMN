@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Check } from 'lucide-react';
+import { X, Check, Camera } from 'lucide-react';
 import Link from 'next/link';
 
 interface PackagesModalProps {
@@ -66,7 +66,7 @@ export function PackagesModal({ isOpen, onClose }: PackagesModalProps) {
                       "Criação de descrição estratégica, focada em buscas locais",
                       "Cadastro dos principais produtos ou serviços oferecidos pela empresa",
                       "Ajuste e padronização de horário de funcionamento, endereço e contatos",
-                      "Inclusão de até 20 fotos do negócio, produtos ou serviços",
+                      "Inclusão de até 10 fotos do negócio, produtos ou serviços",
                       "1 post por semana no perfil do Google (promoções, novidades ou conteúdos estratégicos)"
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3 text-sm text-[#5f6368]">
@@ -158,6 +158,31 @@ export function PackagesModal({ isOpen, onClose }: PackagesModalProps) {
                     Quero o Pacote Avançado
                   </Link>
                 </div>
+              </div>
+            </div>
+
+            <div className="mt-8 bg-gradient-to-r from-blue-50 to-indigo-50 p-6 sm:p-8 rounded-2xl border border-blue-200 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left shadow-sm">
+              <div className="bg-white p-4 rounded-full shadow-sm flex-shrink-0">
+                <Camera className="w-8 h-8 text-[#1a73e8]" />
+              </div>
+              <div className="flex-1">
+                <h4 className="text-lg sm:text-xl font-bold text-[#3c4043] mb-2">Serviço Adicional: Fotografia Profissional</h4>
+                <p className="text-[#5f6368] text-sm sm:text-base leading-relaxed">
+                  As fotos inclusas nos pacotes acima devem ser fornecidas pelo cliente. Quer imagens de alta qualidade que realmente vendem? <strong>Oferecemos serviço de fotografia profissional para o seu negócio.</strong>
+                </p>
+                <p className="text-[#1a73e8] font-semibold mt-3 text-sm">
+                  * Valores a consultar de acordo com a sua necessidade e localização.
+                </p>
+              </div>
+              <div className="flex-shrink-0 w-full sm:w-auto mt-2 sm:mt-0">
+                <Link
+                  href="https://wa.me/5511921814523"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block w-full sm:w-auto py-3 px-6 bg-white border-2 border-[#1a73e8] text-[#1a73e8] text-center font-medium rounded-lg hover:bg-blue-50 transition-colors"
+                >
+                  Consultar Valor
+                </Link>
               </div>
             </div>
           </motion.div>
