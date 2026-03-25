@@ -50,15 +50,15 @@ export function Hero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative flex items-center justify-center lg:justify-end w-full max-w-md sm:max-w-xl 2xl:max-w-2xl mx-auto lg:ml-auto lg:mr-0"
+            className="relative flex items-center justify-center w-full max-w-md sm:max-w-xl 2xl:max-w-2xl mx-auto"
           >
-            <div className="relative w-full flex justify-center lg:justify-end">
+            <div className="relative w-full flex justify-center">
               {/* Mobile Mockup (Café Local Profile) */}
               <motion.div 
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="relative w-[280px] sm:w-[320px] 2xl:w-[360px] bg-white rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-[4px] sm:border-[6px] border-white overflow-hidden z-20 mx-auto lg:mx-0"
+                className="relative w-[280px] sm:w-[320px] 2xl:w-[360px] bg-white rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-[4px] sm:border-[6px] border-white overflow-hidden z-20 mx-auto"
               >
               {/* Profile Header Images */}
               <div className="flex h-32 gap-1 p-1">

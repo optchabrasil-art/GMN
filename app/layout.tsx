@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Google Perfil da Empresa - Restaurantes',
-  description: 'Mostre o que torna seu restaurante especial no Google.',
+  title: 'Google Meu Negócio - Optcha Assessoria',
+  description: 'Destaque sua empresa no Google com a Optcha Assessoria.',
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
