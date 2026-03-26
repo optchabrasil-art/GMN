@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Check, Camera, ArrowLeft } from 'lucide-react';
+import { X, Check, Camera, ArrowLeft, ShieldCheck, CreditCard, QrCode, Lock } from 'lucide-react';
 import Link from 'next/link';
 
 interface PackagesModalProps {
@@ -45,34 +45,97 @@ export function PackagesModal({ isOpen, onClose }: PackagesModalProps) {
             </button>
 
             {selectedPackage ? (
-              <div className="text-center py-8 px-4 flex flex-col items-center">
-                <button 
-                  onClick={() => setSelectedPackage(null)} 
-                  className="absolute top-4 left-4 p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-colors z-10"
-                >
-                  <ArrowLeft className="w-6 h-6" />
-                </button>
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#3c4043] mb-4">
-                  {selectedPackage === 'essencial' ? 'Pacote Essencial' : 'Pacote Avançado'}
-                </h2>
-                <div className="text-5xl font-bold text-[#1a73e8] mb-8">
-                  {selectedPackage === 'essencial' ? 'R$ 397' : 'R$ 279'}
-                </div>
-                
-                <div className="bg-gray-50 rounded-xl p-6 max-w-md w-full mx-auto mb-8 border border-gray-100">
-                  <p className="text-lg font-bold text-[#3c4043] mb-3">Formas de Pagamento</p>
-                  <p className="text-[#3c4043] font-medium mb-1">Pix ou Cartão de Crédito</p>
-                  <p className="text-[#5f6368] text-sm">À vista ou parcelado em até 2x com juros do cartão.</p>
+              <div className="py-4 px-2 sm:px-6">
+                <div className="flex items-center mb-8">
+                  <button 
+                    onClick={() => setSelectedPackage(null)} 
+                    className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-colors mr-4"
+                  >
+                    <ArrowLeft className="w-6 h-6" />
+                  </button>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-[#3c4043]">
+                    Resumo do Pedido
+                  </h2>
                 </div>
 
-                <Link
-                  href="https://wa.me/5511921814523"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block py-4 px-8 bg-[#1a73e8] text-white font-medium rounded-lg hover:bg-[#1557b0] transition-colors shadow-md hover:shadow-lg text-lg w-full max-w-md"
-                >
-                  Link de pagamento
-                </Link>
+                <div className="grid md:grid-cols-5 gap-8">
+                  {/* Left Col: Summary */}
+                  <div className="md:col-span-2 bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                    <div className="mb-3">
+                      <span className="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        {selectedPackage === 'essencial' ? 'Plano Único' : 'Plano Mensal'}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-[#3c4043] mb-2">
+                      Pacote {selectedPackage === 'essencial' ? 'Essencial' : 'Avançado'}
+                    </h3>
+                    <div className="text-4xl font-extrabold text-[#1a73e8] mb-6">
+                      R$ {selectedPackage === 'essencial' ? '397' : '279'}
+                      {selectedPackage === 'avancado' && <span className="text-sm text-gray-500 font-normal">/mês</span>}
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <p className="text-sm font-semibold text-gray-700 border-b pb-2">Você está garantindo:</p>
+                      <ul className="space-y-3 mt-4">
+                        {selectedPackage === 'essencial' ? (
+                          <>
+                            <li className="flex items-start text-sm text-gray-600"><Check className="w-5 h-5 text-green-500 mr-2 shrink-0" /> Criação e otimização do perfil</li>
+                            <li className="flex items-start text-sm text-gray-600"><Check className="w-5 h-5 text-green-500 mr-2 shrink-0" /> Inclusão de fotos estratégicas</li>
+                            <li className="flex items-start text-sm text-gray-600"><Check className="w-5 h-5 text-green-500 mr-2 shrink-0" /> Configuração de SEO Local</li>
+                          </>
+                        ) : (
+                          <>
+                            <li className="flex items-start text-sm text-gray-600"><Check className="w-5 h-5 text-green-500 mr-2 shrink-0" /> Tudo do pacote Essencial</li>
+                            <li className="flex items-start text-sm text-gray-600"><Check className="w-5 h-5 text-green-500 mr-2 shrink-0" /> 3 posts estratégicos semanais</li>
+                            <li className="flex items-start text-sm text-gray-600"><Check className="w-5 h-5 text-green-500 mr-2 shrink-0" /> Gestão de avaliações e relatórios</li>
+                          </>
+                        )}
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* Right Col: Payment Options */}
+                  <div className="md:col-span-3 flex flex-col justify-center">
+                    <h4 className="text-lg font-bold text-[#3c4043] mb-4">Formas de Pagamento Aceitas</h4>
+                    
+                    <div className="space-y-4 mb-8">
+                      <div className="flex items-start p-4 border border-gray-200 rounded-xl bg-white shadow-sm hover:border-green-300 transition-colors">
+                        <div className="bg-green-50 p-3 rounded-full mr-4 shrink-0">
+                          <QrCode className="w-6 h-6 text-green-600" />
+                        </div>
+                        <div>
+                          <p className="font-bold text-gray-800">Pix</p>
+                          <p className="text-sm text-gray-500">Aprovação imediata. Rápido e 100% seguro.</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start p-4 border border-gray-200 rounded-xl bg-white shadow-sm hover:border-blue-300 transition-colors">
+                        <div className="bg-blue-50 p-3 rounded-full mr-4 shrink-0">
+                          <CreditCard className="w-6 h-6 text-blue-600" />
+                        </div>
+                        <div>
+                          <p className="font-bold text-gray-800">Cartão de Crédito</p>
+                          <p className="text-sm text-gray-500">À vista ou parcelado em até 2x com juros do cartão.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <Link
+                      href="https://wa.me/5511921814523"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-full py-4 px-8 bg-[#1a73e8] text-white font-bold rounded-xl hover:bg-[#1557b0] transition-all shadow-md hover:shadow-lg text-lg group"
+                    >
+                      <Lock className="w-5 h-5 mr-2 opacity-80" />
+                      Ir para Pagamento Seguro
+                    </Link>
+                    
+                    <div className="mt-4 flex items-center justify-center text-xs text-gray-500">
+                      <ShieldCheck className="w-4 h-4 mr-1 text-green-500" />
+                      Seus dados estão protegidos e a transação é segura.
+                    </div>
+                  </div>
+                </div>
               </div>
             ) : (
               <>
