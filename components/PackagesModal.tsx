@@ -70,7 +70,7 @@ export function PackagesModal({ isOpen, onClose }: PackagesModalProps) {
                       Pacote {selectedPackage === 'essencial' ? 'Essencial' : 'Avançado'}
                     </h3>
                     <div className="text-4xl font-extrabold text-[#1a73e8] mb-6">
-                      R$ {selectedPackage === 'essencial' ? '297' : '279'}
+                      R$ {selectedPackage === 'essencial' ? '297' : '259'}
                       {selectedPackage === 'avancado' && <span className="text-sm text-gray-500 font-normal">/mês</span>}
                     </div>
                     
