@@ -194,7 +194,7 @@ export function PackagesModal({ isOpen, onClose }: PackagesModalProps) {
                         onClick={() => setSelectedPackage('essencial')}
                         className="block w-full py-3 px-4 bg-white border-2 border-[#1a73e8] text-[#1a73e8] text-center font-medium rounded-lg hover:bg-blue-50 transition-colors"
                       >
-                        Quero o Pacote Essencial
+                        Investimento 
                       </button>
                     </div>
                   </div>
@@ -253,7 +253,7 @@ export function PackagesModal({ isOpen, onClose }: PackagesModalProps) {
                         onClick={() => setSelectedPackage('avancado')}
                         className="block w-full py-3 px-4 bg-[#1a73e8] text-white text-center font-medium rounded-lg hover:bg-[#1557b0] transition-colors shadow-md hover:shadow-lg"
                       >
-                        Quero o Pacote Avançado
+                        Investimento 
                       </button>
                     </div>
                   </div>
