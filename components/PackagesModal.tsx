@@ -127,7 +127,7 @@ export function PackagesModal({ isOpen, onClose }: PackagesModalProps) {
                       className="flex items-center justify-center w-full py-4 px-8 bg-[#1a73e8] text-white font-bold rounded-xl hover:bg-[#1557b0] transition-all shadow-md hover:shadow-lg text-lg group"
                     >
                       <Lock className="w-5 h-5 mr-2 opacity-80" />
-                      Ir para Pagamento Seguro
+                      Especialista 
                     </Link>
                     
                     <div className="mt-4 flex items-center justify-center text-xs text-gray-500">
