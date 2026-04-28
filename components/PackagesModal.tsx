@@ -54,7 +54,7 @@ export function PackagesModal({ isOpen, onClose }: PackagesModalProps) {
                     <ArrowLeft className="w-6 h-6" />
                   </button>
                   <h2 className="text-2xl sm:text-3xl font-bold text-[#3c4043]">
-                    Resumo do Pedido
+                    
                   </h2>
                 </div>
 
