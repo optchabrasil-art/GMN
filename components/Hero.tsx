@@ -21,7 +21,7 @@ export function Hero() {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#3c4043] leading-tight mb-4 sm:mb-6"
           >
             Destaque seu negócio,<br className="hidden sm:block" />
-            <span className="text-[#1a73e8]">atraia mais clientes nas buscas Google</span>
+            <span className="text-[#1a73e8]">atraia mais clientes nas buscas Google.</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
