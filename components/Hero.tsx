@@ -29,7 +29,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl 2xl:text-2xl text-[#5f6368] leading-relaxed mb-6 sm:mb-8"
           >
-            Com o Google Meu Negócio, você aparece para quem está procurando pelos seus produtos ou serviços na Pesquisa e no Maps. Transforme buscas em vendas e aumente o faturamento do seu negócio.
+          Com o Google Meu Negócio, você aparece para quem está procurando pelos seus produtos ou serviços na Pesquisa e no Maps. Transforme em vendas de forma orgânica.  
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
